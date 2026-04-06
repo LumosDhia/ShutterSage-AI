@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+transformers
+torchvision
+torch
+python-multipart
+exif

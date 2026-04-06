@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Project Specific
+/images/
+/temp/
+/cache/
+/output/
+
+# OS Related
+.DS_Store
+Thumbs.db
+desktop.ini
