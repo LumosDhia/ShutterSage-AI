@@ -1,5 +1,7 @@
 # ShutterSage-AI
 
+![ShutterSage Hero](assets/camera-hero.png)
+
 AI-powered CLI for zero-shot image metadata tagging with NPU acceleration.
 
 ## Technical Specifications
@@ -16,7 +18,7 @@ python main.py "C:\Path\To\Imagery" --threshold 0.05
 ```
 
 ## Quick Start
-The `start.ps1` script automates environment activation, dependency verification, and path input:
+The start.ps1 script automates environment activation, dependency verification, and path input:
 ```powershell
 .\start.ps1
 ```
