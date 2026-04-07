@@ -16,7 +16,7 @@ python main.py "C:\Path\To\Imagery" --threshold 0.05
 ```
 
 ## Quick Start
-Run the automation wizard:
+The `start.ps1` script automates environment activation, dependency verification, and path input:
 ```powershell
 .\start.ps1
 ```
