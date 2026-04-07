@@ -1,5 +1,5 @@
-# --- 📸 AI-Picture-Tager (Catppuccin Macchiato) ---
-Write-Host "--- 📸 AI-Picture-Tager (Wizard) ---" -ForegroundColor Cyan
+# --- 📸 ShutterSage-AI (Catppuccin Macchiato) ---
+Write-Host "--- 📸 ShutterSage-AI (Wizard) ---" -ForegroundColor Cyan
 
 # 1. Check Virtual Environment
 if (Test-Path ".\virtual-env") {

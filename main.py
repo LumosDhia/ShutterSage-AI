@@ -16,7 +16,7 @@ macchiato_theme = Theme({
 console = Console(theme=macchiato_theme)
 
 def main():
-    parser = argparse.ArgumentParser(description="AI-Picture-Tager: The Lossless AI Photo Tagger")
+    parser = argparse.ArgumentParser(description="ShutterSage-AI: The Lossless AI Photo Tagger")
     parser.add_argument("path", help="The directory or specific file to process (.ARW, .JPG, .PNG)")
     parser.add_argument("--threshold", type=float, default=0.25, help="Confidence threshold for AI tags (default: 0.25)")
     parser.add_argument("--recursive", action="store_true", help="Process subdirectories recursively")
@@ -31,7 +31,7 @@ def main():
         console.print(f"[error]Error: {target} does not exist.[/error]")
         sys.exit(1)
 
-    console.print("--- AI-Picture-Tager: [highlight]Initializing Analysis Engine[/highlight] ---", style="info")
+    console.print("--- ShutterSage-AI: [highlight]Initializing Analysis Engine[/highlight] ---", style="info")
     
     if os.path.isfile(target):
         # Process single file

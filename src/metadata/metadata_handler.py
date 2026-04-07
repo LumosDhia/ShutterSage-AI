@@ -33,7 +33,7 @@ class MetadataHandler:
             
             # Simple but valid XMP Template
             xmp_content = f"""<?xpacket begin='' id='W5M0MpCehiHzreSzNTczkc9d'?>
-<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='AI-Picture-Tager'>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='ShutterSage-AI'>
  <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
   <rdf:Description rdf:about=''
     xmlns:dc='http://purl.org/dc/elements/1.1/'
@@ -42,7 +42,7 @@ class MetadataHandler:
     <rdf:Bag>
 {keyword_items}    </rdf:Bag>
    </dc:subject>
-   <xmp:CreatorTool>AI-Picture-Tager</xmp:CreatorTool>
+   <xmp:CreatorTool>ShutterSage-AI</xmp:CreatorTool>
   </rdf:Description>
  </rdf:RDF>
 </x:xmpmeta>

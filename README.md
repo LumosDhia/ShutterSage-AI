@@ -1,4 +1,4 @@
-# AI-Picture-Tager
+# ShutterSage-AI
 
 AI-powered CLI for zero-shot image metadata tagging with NPU acceleration.
 
