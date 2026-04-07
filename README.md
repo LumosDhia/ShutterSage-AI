@@ -3,8 +3,8 @@
 AI-powered CLI for zero-shot image metadata tagging with NPU acceleration.
 
 ## Technical Specifications
-- **Vision Model**: CLIP Large (openai/clip-vit-large-patch14)
-- **Hardare Acceleration**: NPU/GPU via DirectML (Windows)
+- **Vision Model**: [CLIP Large (openai/clip-vit-large-patch14)](https://huggingface.co/openai/clip-vit-large-patch14)
+- **Hardware Acceleration**: NPU/GPU via DirectML (Windows)
 - **Media Support**: RAW (.ARW, .CR2, .NEF) and standard formats (.JPG, .PNG)
 - **Metadata Output**: Standard dc:subject XMP sidecars
 
