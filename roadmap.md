@@ -1,31 +1,39 @@
-# AI Organiser: The Lossless Tagger Roadmap 📸
+# AI-Picture-Tager: The Lossless Tagger Roadmap 📸
 
-This roadmap focuses on automatically tagging your photography collection with AI and injecting those tags directly into the image's metadata (IPTC/XMP) without altering a single pixel of the image itself.
+This roadmap focuses on a high-performance CLI tool for automatically tagging your photography collection with AI and injecting those tags directly into the image's metadata (IPTC/XMP) without altering a single pixel of the image itself.
 
 ---
 
 ## 🏗️ Phase 1: Foundation & Tools
-- [ ] **Environment Setup**: Initialize Python with AI vision (`CLIP`, `Transformers`) and metadata writer (`pyexiftool` or `piexif`).
-- [ ] **Core Architecture**: Define the "Analyze then Inject" workflow.
+- [x] **Environment Setup**: Initialised Python venv with AI vision (`CLIP`, `Transformers`) and metadata writer (`pyexiv2`).
+- [x] **Core Architecture**: Defined the "Analyze then Inject" workflow (`src/core/processor.py`).
+- [x] **CLI Removal of Website**: Scrapped the web interface to focus on a robust, lightweight command-line tool.
 
 ## 🧠 Phase 2: AI Vision Engine
-- [ ] **Scene & Object Detection**: Integrate **OpenAI's CLIP** to identify complex scenes (e.g., "Misty mountain at sunrise").
-- [ ] **Confidence Filtering**: Logic to only suggest tags with high AI confidence to avoid "wrong" labels.
-- [ ] **Technical Analysis**: Extract camera bodies, lenses, and settings (ISO, Aperture) to auto-tag technical shot details.
+- [x] **Scene & Object Detection**: Integrating **OpenAI's CLIP** model for zero-shot tagging (`src/ai/vision_engine.py`).
+- [x] **Confidence Filtering**: Initial logic implemented and tested.
+- [ ] **Technical Analysis**: Extracting technical shot details (ISO, Aperture).
+- [ ] **NPU Acceleration**: Optimise for Snapdragon NPU to speed up local analysis.
 
 ## 💉 Phase 3: Lossless Metadata Injection
-- [ ] **IPTC/XMP Integration**: Develop the module to write AI tags into the standard `Keywords` field.
-- [ ] **Pixel Data Integrity**: Implement a "Safety First" check (hashing) to guarantee image data is NEVER modified or re-compressed.
-- [ ] **Batch Processing**: Speed-optimised engine to process thousands of images efficiently.
+- [x] **XMP Sidecar Integration**: Developed the module to write AI tags into standard `dc:subject`.
+- [ ] **Safety First (Hashing)**: Implement a hashing check to guarantee RAW files remain mathematically identical.
+- [ ] **Batch Processing**: Speed-optimised engine to process thousands of images efficiently via CLI.
 
-## 🖼️ Phase 4: Photographer Review Gallery (UI)
-- [ ] **Sleek UI Design**: A minimalist, dark-themed dashboard to view photos and their AI-suggested tags.
-- [ ] **Bulk Approval**: One-click "Commit Tags" button to write thousands of tags at once.
-- [ ] **Manual Tweak**: Allow you to quickly add/remove tags before committing.
-
-## 🔎 Phase 5: Search & Sort
-- [ ] **Smart Explorer**: Search through your entire library via metadata (even on Windows/macOS file explorers).
+## 🔎 Phase 4: Search & Sort
+- [ ] **Manual CLI Tweak**: Commands to quickly review or modify AI-suggested tags before committing.
+- [ ] **Smart Explorer**: Search through your entire library via metadata tags.
 - [ ] **Auto-Sorting**: Folder organization based on the newly injected AI tags.
+
+## 🚀 Phase 5: Pro Features
+- [ ] **Face Recognition**: Local integration for privacy-first person tagging.
+- [ ] **Similarity Grouping**: Find similar shots (even if exposure differs) to help with culling.
+- [ ] **Lightroom Plugin**: Direct integration to trigger AI tagging from within Adobe Lightroom.
+
+## 📁 Phase 6: Automation & Export
+- [ ] **Smart Folder Structure**: Automatically move or copy files into folder hierarchies based on AI tags.
+- [ ] **Cloud Sync (Optional)**: Securely backup XMP sidecars to a personal cloud for universal access.
+- [ ] **Export for Social**: One-click "Ready for Instagram" export with auto-captioning based on tags.
 
 ---
 
